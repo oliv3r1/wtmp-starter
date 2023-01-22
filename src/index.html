@@ -1,17 +1,167 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles.css" />
-    
+    <title>Lounari</title>
   </head>
   <body>
-    <h1>task2</h1>
+    <nav>
+      <button class="menu-btn" onclick="showMenu()">&#9776;</button>
+      <ul>
+        <li><a href="#">Etusivu</a></li>
+        <li><a href="#">Ruokalistat</a></li>
+        <li><a href="#">Ravintolat</a></li>
+        <li><a href="#">Yhteystiedot</a></li>
+      </ul>
 
-   
+      <form>
+        <div class="search-container">
+          <input type="text" placeholder="" />
+        </div>
+      </form>
+    </nav>
 
+    <header id="banner">
+      <div id="banner-area">
+        <h1>Lounari</h1>
+        <p>Missä tänään syötäisiin.</p>
+      </div>
+      <div id="banner-logo">
+        <img src="assets/Lounas.jpg" alt="dd" />
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="item info">
+          <p>
+            Missä tänään syötäisiin? Tuttu tarina ennen lounashetkeä. Palvelu
+            etsii lähelläsi olevat lounaspaikat, sekä näyttää niiden
+            päivittäisen lounaslistan. Viikottaiset lounaslistat ovat myö
+            käytettävissäsi. Pääset niihin klikkaamalla ravintolan logoa.
+          </p>
+        </div>
+      </div>
+
+      <div class="restaurant-area">
+        <div class="restaurant">
+          <div class="restaurant-logo">
+            <img src="assets/sodexo.png" alt="kuva" />
+          </div>
+          <div class="menu">
+            <div class="heading">
+              Ruokalista 1
+              <span>
+                <svg
+                  class="location-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 48 60"
+                  style="enable-background: new 0 0 48 48"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M9,18c0,7.98,13.63,25.85,14.21,26.61C23.4,44.85,23.69,45,24,45s0.6-0.15,0.79-0.39C25.37,43.85,39,25.98,39,18   c0-8.27-6.73-15-15-15S9,9.73,9,18z M37,18c0,6.27-10.06,20.36-13,24.33C21.06,38.36,11,24.27,11,18c0-7.17,5.83-13,13-13   S37,10.83,37,18z"
+                    />
+                    <path
+                      d="M14,18c0,5.51,4.49,10,10,10s10-4.49,10-10S29.51,8,24,8S14,12.49,14,18z M32,18c0,4.41-3.59,8-8,8s-8-3.59-8-8s3.59-8,8-8   S32,13.59,32,18z"
+                    />
+                  </g>
+                </svg>
+                <p style="font-size: 14px">100m</p>
+              </span>
+            </div>
+            <div>
+              <h1>Kanakeitto</h1>
+              <p class="plain-text">
+                Corporis inventore cumque delectus id nobis unde veritatis
+                soluta minus aliquam, soluta minus aliquam, at neque! Pariatur
+                quibusdam eveniet ipsa quia temporibus adipisci at neque!
+                Pariatur quibusdam eveniet ipsa quia temporibus adipisci
+                perferendis porro?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant">
+          <div class="restaurant-logo">
+            <img src="assets/sodexo.png" alt="kuva2" />
+          </div>
+          <div class="menu">
+            <div class="heading">
+              Ruokalista 2
+              <span>
+                <svg
+                  class="location-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 48 60"
+                  style="enable-background: new 0 0 48 48"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M9,18c0,7.98,13.63,25.85,14.21,26.61C23.4,44.85,23.69,45,24,45s0.6-0.15,0.79-0.39C25.37,43.85,39,25.98,39,18   c0-8.27-6.73-15-15-15S9,9.73,9,18z M37,18c0,6.27-10.06,20.36-13,24.33C21.06,38.36,11,24.27,11,18c0-7.17,5.83-13,13-13   S37,10.83,37,18z"
+                    />
+                    <path
+                      d="M14,18c0,5.51,4.49,10,10,10s10-4.49,10-10S29.51,8,24,8S14,12.49,14,18z M32,18c0,4.41-3.59,8-8,8s-8-3.59-8-8s3.59-8,8-8   S32,13.59,32,18z"
+                    />
+                  </g>
+                </svg>
+                <p style="font-size: 14px">100m</p>
+              </span>
+            </div>
+            <div>
+              <button id="Language">Change Language</button>
+              <button id="sortCourses">Sort Courses</button>
+              <button id="randomBtn">Random dish</button>
     
-    </div>
+              <div id="courses">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="restaurant">
+          <div class="ravintola-add">
+            <div class="heading">
+              <svg
+                id="add-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 128 160"
+                style="enable-background: new 0 0 128 128"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M64,1L64,1C29.2,1,1,29.2,1,64s28.2,63,63,63h0c34.8,0,63-28.2,63-63S98.8,1,64,1z M94,69H69v25H59V69H34V59h25V34h10v25   h25V69z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="ravintola-add">
+            <h1 style="font-size: 14px">Lisää ravintola</h1>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

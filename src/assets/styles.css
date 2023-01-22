@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-em-color: #940e3f;
+  --main-bg-color: #43e04f;
+}
+
+body {
+  font-size: 1em;
+  font-family: "Lato", sans-serif;
+}
+
+nav {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding: 1rem 1rem;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+nav ul {
+  display: flex;
+  align-content: center;
+  list-style-type: none;
+}
+
+nav ul a {
+  font-size: 24px;
+  color: var(--main-em-color);
+  text-decoration: none;
+  padding: 0.6rem;
+  margin: 0 0.25rem;
+  align-content: center;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+nav ul li a:hover {
+  background-color: #e0437c;
+  color: white;
+  border-radius: 10px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  padding-left: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+input {
+  background-image: url(Assets/search.svg);
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  margin-right: 10vw;
+  text-indent: 30px;
+  font-size: 15px;
+  border: 0.2em solid;
+  border-color: var(--main-em-color);
+  border-radius: 10px;
+}
+
+.container {
+  word-wrap: break-word;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-areas: "info info ";
+}
+
+#banner {
+  word-wrap: break-word;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-areas: "banner-area banner-logo";
+  height: 30vh;
+}
+
+#banner-area {
+  grid-area: banner-area;
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  color: white;
+}
+
+#banner-logo img {
+  display: flex;
+  grid-area: banner-logo;
+  width: 100%;
+  background-size: cover;
+  background-size: contain;
+  height: 30vh;
+}
+
+#banner-area h1 {
+  font-size: 60px;
+  font-weight: 800;
+  font-family: "Roboto Slab", serif;
+}
+
+#banner-area p {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info p {
+  color: #343a40;
+  font-family: "DM Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  width: 80vw;
+  padding: 2em 0.2em;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 940px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 80vw;
+    padding: 2em 0;
+    font-size: 1.5em;
+  }
+  .search-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .menu-btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  #banner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner-area" "banner-logo";
+    height: 40vh;
+  }
+
+  #banner-area,
+  #banner-logo img {
+    height: 20vh;
+    width: 100%;
+  }
+  .menu-btn {
+    display: block;
+  }
+  nav ul a {
+    display: none;
+  }
+}
+
+.menu-btn {
+  padding: 0.4em;
+  color: rgb(0, 0, 0);
+  background-color: rgba(23, 0, 0, 0.057);
+  margin-left: 2%;
+}
+
+.ravintola-add {
+  display: flex;
+  padding: 0;
+  align-content: center;
+  align-items: center;
+  color: #9badbf;
+}
+
+.ravintola-add h1 {
+  padding: 0.2em;
+}
+
+#add-icon:hover {
+  fill: #343a40;
+}
+
+#add-icon:active {
+  fill: #e0437c;
+}
+
+#add-icon {
+  width: 50px;
+  height: 50px;
+  fill: #9badbf;
+  margin-top: 15px;
+}
+.location-icon {
+  width: 30px;
+  height: 25px;
+}
+
+.location-icon:hover {
+  fill: #43e04f;
+}
+
+.restaurant-area {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  grid-gap: 50px;
+  margin: 60px;
+}
+
+.restaurant-area img {
+  width: 136px;
+  height: 136px;
+}
+
+.restaurant {
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.057);
+  border: 1px solid #343a40;
+  border-radius: 10px;
+  display: flex;
+}
+
+.restaurant h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.restaurant-logo {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+.restaurant-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out;
+  border-color: #43e04f;
+}
+
+.restaurant-logo > img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.menu {
+  flex: 5;
+  padding: 0 0 1em 1em;
+  line-height: 120%;
+}
+.menu > * {
+  font-size: 12px;
+}
+
+.heading {
+  display: flex;
+  font-size: 21px;
+  font-weight: 900;
+  margin-right: 30%;
+}
+
+.heading span {
+  margin-bottom: 20px;
+  font-weight: 900;
+  display: flex;
+ 
+}
+
+
+
+
+.plain-text {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .restaurant-area {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin: 30px;
+  }
+}
