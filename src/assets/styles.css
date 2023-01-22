@@ -67,7 +67,7 @@ nav ul li a:hover {
 }
 
 input {
-  background-image: url(Assets/search.svg);
+  background-image: url(assets/search.svg);
   background-repeat: no-repeat;
   background-position: 2px 3px;
 }
