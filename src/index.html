@@ -3,63 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles.css" />
-    <title>Lounari</title>
+    
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#">Etusivu</a></li>
-        <li><a href="#">Ruokalistat</a></li>
-        <li><a href="#">Ravintolat</a></li>
-        <li><a href="#">Yhteystiedot</a></li>
-      </ul>
-      <div class="search-container">
-        <form>
-          <input type="text" placeholder="➜" />
-        </form>
-      </div>
-    </nav>
-    <header>
-      <div class="container">
-        <div class="item left">
-          <h1>Lounari.</h1>
-          <p>Missä tänään syötäisiin.</p>
-        </div>
-        <div class="item right">
-          <img src="assets/Lounas.jpg" alt="image" />
-        </div>
-        <div class="info">
-          <p>
-            Missä tänään syötäisiin? Tuttu tarina ennen lounashetkeä. Palvelu
-            etsii lähelläsi olevat lounaspaikat, sekä näyttää niiden
-            päivittäisen lounaslistan. Viikottaiset lounaslistat ovat myö
-            käytettävissäsi. Pääset niihin klikkaamalla ravintolan logoa.
-          </p>
-        </div>
-      </div>
-    </header>
+    <h1>Number guessing game</h1>
 
-    <main class="container">
-      <div class="item box1">
-        <div class="textbox">
-          <p style="font-size: 30px">Ravintola 2</p>
-        </div>
-      </div>
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
-      <div class="item box2">
-        <div class="textbox2">
-          <button id="Language">Change Language</button>
-          <button id="sortCourses">Sort Courses</button>
-          <button id="randomBtn">Random dish</button>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="Submit guess" class="guessSubmit">
+    </div>
 
-          <div id="courses">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </main>
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
   </body>
 </html>
