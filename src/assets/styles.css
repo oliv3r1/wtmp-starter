@@ -282,6 +282,7 @@ input {
   flex: 5;
   padding: 0 0 1em 1em;
   line-height: 120%;
+  margin-left: 1em;
 }
 .menu > * {
   font-size: 12px;
@@ -298,7 +299,7 @@ input {
   margin-bottom: 20px;
   font-weight: 900;
   display: flex;
- 
+
 }
 
 
